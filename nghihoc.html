@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thông báo nghỉ học - {{ class_name }} - {{ name }}</title>
+  <!-- <title>Thông báo nghỉ học - {{ class_name }} - {{ name }}</title> -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 720px;
+      margin: auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .header {
+      /* Gradient đa màu rực rỡ như bạn muốn */
+      background: linear-gradient(270deg, #fe4f4f, #fbff00, #15ff00, #22deff, #fe4fd8);
+      background-size: 800% 800%;
+      animation: gradientFlow 18s ease infinite;
+      padding: 50px 30px 30px;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .title {
+      font-size: 2.8em;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+    .content {
+      padding: 40px 50px;
+    }
+    .greeting {
+      font-size: 1.25em;
+      margin: 25px 0 30px;
+      font-weight: 500;
+    }
+    .box {
+      background: #e8f4fd;
+      border-left: 6px solid #0066cc;
+      padding: 25px;
+      margin: 30px 0;
+      border-radius: 8px;
+      font-size: 1.1em;
+    }
+    .highlight {
+      color: #d81b60;
+      font-weight: bold;
+    }
+    .sign {
+      text-align: right;
+      font-style: italic;
+      margin-top: 50px;
+      color: #333;
+    }
+    .sign strong {
+      font-size: 1.5em;
+      color: #004080;
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <img src="https://www.hcmtoplist.com/wp-content/uploads/2021/10/thong-tin-ve-truong-trung-hoc-thuc-hanh-sai-gon.jpg" width="520" >
+  </div>
+  <div class="content">
+    <p class="greeting">
+      Đơn Thông báo nghỉ học
+      Kính gửi: <strong>Quý phụ huynh học sinh {{ name }}</strong><br>
+      Lớp: <strong>{{ class_name }}</strong>
+    </p>
+
+    <div class="box">
+      Nhà trường trân trọng thông báo lịch nghỉ học của học sinh như sau:<br><br>
+      
+      <strong>Thời gian nghỉ:</strong> {{ date }}<br>
+      <strong>Lý do:</strong> <span class="highlight">{{ reason }}</span><br><br>
+      
+      Sau thời gian nghỉ trên, học sinh sẽ <strong>học bình thường</strong> theo thời khóa biểu.
+    </div>
+
+    <p>
+      Kính mong quý phụ huynh sắp xếp thời gian và nhắc nhở con em thực hiện tốt nội quy trong kỳ nghỉ.<br>
+      Chúc gia đình quý phụ huynh một kỳ nghỉ lễ vui vẻ, an lành và ý nghĩa!
+    </p>
+
+    <div class="sign">
+      Trân trọng thông báo !<br>
+      <strong>{{ sender }}</strong>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
